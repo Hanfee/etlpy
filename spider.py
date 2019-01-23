@@ -3,7 +3,10 @@ import gzip
 import re
 import socket
 import urllib.request
-from lxml import etree
+try:
+    from lxml import etree
+except ImportError:
+    from xml import etree
 from urllib.parse import urlparse,urlunparse
 import extends;
 import http.cookiejar
